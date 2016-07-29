@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<!-- saved from url=(0097)https://storage.googleapis.com/supplemental_media/udacityu/2730818600/bootstrap-prestructure.html -->
+<html lang="en">
+  <head>
+    <title>Greg Zimmer-Portfolio</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ^^'content' attribute instructs the browser to match the screen's width in DIPs; initial scale
+    sets the initial ratio of 1:1 DIPs:Screen or hardware pixels-->
+    <script type="text/javascript" src="js/jquery-1.12.3.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/GCZ_stylez.css">
+    <link rel="stylesheet" href="css/GCZ_mqueries.css">
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
+    <!-- ^^Change this^^ -->
+    <link rel="stylesheet" href="//normalize-css.googlecode.com/svn/trunk/normalize.css">
+    <!-- ^^to adapt the displaying of webpage to older browsers where necessary-->
+    
+  </head>
+
+  <body>
+    <div class="container">
+    <!-- ^^necessary to utilize bootstrap.css' alignment/padding settings -->
+      <header class="row">
+      <!-- ^^similarly, existing row-div styling(formatting is style, btw) must be applied to columns and by extension content to make full use of bootstrap -->
+          <div class="col-md-6">
+            <img class="title-logo" src="images/radioactive.png" alt="yellow and black radioactivity symbol">
+          </div>
+          <div class="col-md-6 text-right text-uppercase">
+            <h1 class="text-thin title-super">Greg Zimmer</h1>
+            <h3 class="Hthree">Front-End Web Developer</h3>
+          </div>
+      </header>
+
+      <nav class="row">
+        <div class="col-xs-4 nav">
+          <h5 class="nav"><a class="nav" href="https://www.linkedin.com/in/greg-zimmer-a9471759/" target="blank">LinkedIn</a></h5>
+        </div>
+        <div class="col-xs-4 nav">
+          <h5 class="nav"><a class="nav" href="https://www.facebook.com/greg.zimmer.37/" target="blank">Facebook</a></h5>
+        </div>
+        <div class="col-xs-4 nav">
+          <h5 class="nav"><a class="nav" href="https://www.google.com/maps/place/Colorado/@38.9807165,-107.7944592,7z/data=!3m1!4b1!4m5!3m4!1s0x874014749b1856b7:0xc75483314990a7ff!8m2!3d39.5500507!4d-105.7820674/" target="blank">Google Maps</a></h5>
+        </div>
+      </nav>
+
+      <div class="row text-center text-uppercase">
+        <div class="col-md-12">
+          <img class="img-responsive" src="images/banner.jpg" alt="red-stained wood panel pattern">
+          <!-- ^^note the "img-responsive" img class -->
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="h-two text-muted">Featured Work</h2>
+        </div>
+      </div>
+
+      <article class="row text-center text-uppercase">
+        <div class="col-md-6 col-centered">
+          <img class="img-responsive" src="images/desert_sun.jpg" data-toggle="modal" data-target="#modal1" alt="Camel silhouette under desert sun">
+            <h3 class="h-three">SunChaser</h3>
+              <p><a class="nav" href="http://github.com/" target="blank">Link to project</a></p>
+        </div>
+
+        <div class="col-md-6 col-centered">
+          <img class="img-responsive" src="images/arcade.jpg" data-toggle="modal" data-target="#modal2" alt="old arcade game buttons">
+            <h3 class="h-three">Arcade Game Clone</h3>
+              <p><a class="nav" href="http://github.com/" target="blank">Link to project</a></p>
+        </div>
+      </article>
+
+     <!--^^data-toggle (movement) and data-target (hook) attributes work in conjunction with the document-linked jquery and bootstrap
+          javascript libraries creating the modal interactivity-->
+
+      <article class="row text-center text-uppercase">
+        <div class="col-md-6 col-centered">
+          <img class="img-responsive" src="images/superhero.jpg" data-toggle="modal" data-target="#modal3" alt="stylized superhero">
+            <h3 class="h-three">Performance-Maximizer</h3>
+              <p><a class="nav" href="http://github.com/" target="blank">Link to project</a></p>
+        </div>
+
+        <div class="col-md-6 col-centered">
+          <img class="img-responsive" src="images/neighborhood.jpg" data-toggle="modal" data-target="#modal3" alt="aerial view of busy intersection">
+            <h3 class="h-three">Neighborhood Map</h3>
+              <p><a class="nav" href="http://github.com/" target="blank">Link to project</a></p>
+        </div>
+      </article>
+
+      <div class="row">
+          <hr class="line-divider">
+      </div>
+
+      <footer class="row footer">
+        <col class="col-xs-12">
+          <p class="footer">Built using <a class="nav" href="http://getbootstrap.com/" target="blank">Bootstrap</a></p>
+        </col>
+      </footer>
+
+      <footer class="row footer">
+        <col class="col-xs-12">  
+          <p class="footer">Images Edited with <a class="nav" href="https://pixlr.com/" target="blank">Pixlr</a></p>
+        </col>
+      </footer>
+        <!-- I was unable to correctly install imagemagick/graphicsmagick, therefore could not make use of the image-transforming grunt.js
+      "batch script"-->
+
+<!-- Modals, (below) are streamlined, but flexible, dialog prompts with the minimum required functionality and smart defaults. -->
+      <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="ModalLabel1" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title text-uppercase text-center" id="ModalLabel1">SunChaser</h4>
+            </div>
+            <div class="modal-body">
+              <img class="img-responsive" src="images/desert_sun.jpg" alt="Camel silhouette under desert sun">
+                <p>This is an app I plan to develop 'down the road' - the complexity of code required to achieve my objective is as yet unknown</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div> <!--/.modal-footer -->
+          </div> <!-- /.modal-conent -->
+        </div> <!-- /.modal-dialog -->
+      </div> <!-- /.modal-fade -->
+
+      <div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="ModalLabel2" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title text-uppercase text-center" id="ModalLabel2">Arcade Game Clone</h4>
+            </div>
+            <div class="modal-body">
+              <img class="img-responsive" src="images/arcade.jpg" alt="old arcade game buttons">
+                <p>This was my second project-note the increased complexity...</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div> <!--/.modal-footer -->
+          </div> <!-- /.modal-conent -->
+        </div> <!-- /.modal-dialog -->
+      </div> <!-- /.modal-fade -->
+
+      <div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="ModalLabel3" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title text-uppercase text-center" id="ModalLabel3">Performance-Maximizer</h4>
+            </div>
+            <div class="modal-body">
+              <img class="img-responsive" src="images/superhero.jpg" alt="stylized superhero">
+                <p>This was my third project-I learned a great deal during this project...</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div> <!--/.modal-footer -->
+          </div> <!-- /.modal-conent -->
+        </div> <!-- /.modal-dialog -->
+      </div> <!-- /.modal-fade -->
+
+      <div class="modal fade" id="modal4" tabindex="-1" role="dialog" aria-labelledby="ModalLabel4" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title text-uppercase text-center" id="ModalLabel4">Neighborhood mApp</h4>
+            </div>
+            <div class="modal-body">
+              <img class="img-responsive" src="images/neighborhood.jpg" alt="aerial view of busy intersection">
+                <p>This was my last project for the FE Nanodegree, demonstrating my ability to develop basic, functional, responsive web-based applications</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div> <!--/.modal-footer -->
+          </div> <!-- /.modal-conent -->
+        </div> <!-- /.modal-dialog -->
+      </div> <!-- /.modal-fade -->
+    </div> <!-- /.container -->
+  </body>    
+</html>
+
+<!-- style rules brief:
+a. no caps in code itself
+b. for action items, the standard is
+'<comment> TODO: <comment>' 
+c. provide alternatives <alt=> for
+multimedia elements 
+d. use a new line for every block, list or table
+and indent every such child element
+e. (class="value") not (class='value')
+ -->
+
+ 
+<!-- TODO: 
+  
+  0. Change 
+
+  1. add a hamburger menu of navigation items (social media) active 
+  below test mobile-device (Nexus 5?) display size of 550px (otherwise as separate row)
+  makes use of : height, 300px width, absolute position, see scripting at end of hometown app.html along with the element code itself
+    New css attributes: order; flex-grow, z-index:, transform //OR// use bootstrap Navbar (after understanding exactly what it does)
+
+  2. Make images responsive without the use of bootstrap
+
+  3. replace social media text links with respective icons
+  
+  *. not for the website, but create a batch script to run the install of needed grunt plug-ins for image transformation each time you need it
+
+  -->
