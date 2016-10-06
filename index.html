@@ -1,13 +1,22 @@
 <!-- TODO:
 
-  1. add a hamburger menu of navigation items (social media) active
+  1.5 "Freeze Panes" at top of page somehow
+
+  2. add a hamburger menu of navigation items (social media) active
   below test mobile-device (Nexus 5?) display size of 550px (otherwise as separate row)
   makes use of : height, 300px width, absolute position, see scripting at end of hometown app.html along with the element code itself
     New css attributes: order; flex-grow, z-index:, transform //OR// use bootstrap Navbar (after understanding exactly what it does)
 
-  2.
+  3. Change Fonts, colors, etc
 
-  3. replace social media text links with respective icons, styled to animate(via special CSS) on event=hover, and replace facebook with GitHub (Keeping LinkedIn)
+  4. Optimize for performance by:
+    a). DOM/CSSOM: minifying all referenced css and js
+    b). CSSOM: address render-blocking CSS by segregating conditional css
+      ie "@media print and (min-width:100px) and (max-width:200px)
+        {>>make grayscale, for example}
+      and using 'onload' in html to prevent unnecessary retrievals
+    c). Layout/Reflow: {reduce length/depth of DOM tree, house animations outside the LAyout layer using position:absolute or ..:fixed}
+    d). JS: FLIP UI animazshuns
 
   -->
 
@@ -21,18 +30,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- ^^'content' attribute instructs the browser to match the screen's width in DIPs; initial scale
     sets the initial ratio of 1:1 DIPs:Screen or hardware pixels-->
-    <script type="text/javascript" src="js/jquery-1.12.3.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/GCZ_stylez.css">
     <link rel="stylesheet" href="css/GCZ_mqueries.css">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
-    <!-- ^^Change this^^ -->
-    <link rel="stylesheet" href="//normalize-css.googlecode.com/svn/trunk/normalize.css">
-    <!-- ^^to adapt the displaying of webpage to older browsers where necessary-->
 
+    <script type="text/javascript" src="js/jquery-1.12.3.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+
+    <!-- ^^Change this^^ -->
   </head>
 
   <body>
@@ -51,13 +59,16 @@
 
       <nav class="row">
         <div class="col-xs-4 nav">
-          <h5 class="nav"><a class="nav" href="https://www.linkedin.com/in/greg-zimmer-a9471759/" target="blank">LinkedIn</a></h5>
+          <h5 class="nav"><a class="social" href="https://www.linkedin.com/in/greg-zimmer-a9471759/" target="blank"><img src="images/1475804973_linkedin_circle_gray.svg" alt="LinkedIn Icon"></a></h5>
+        </div>
+        <script type="text/javascript">
+          // $("h5").append("words");
+        </script>
+        <div class="col-xs-4 nav">
+          <h5 class="nav"><a class="social" href="https://www.facebook.com/greg.zimmer.37/" target="blank"><img src="images/social-1_logo-facebook.svg" alt="Facebook Icon"></a></h5>
         </div>
         <div class="col-xs-4 nav">
-          <h5 class="nav"><a class="nav" href="https://www.facebook.com/greg.zimmer.37/" target="blank">Facebook</a></h5>
-        </div>
-        <div class="col-xs-4 nav">
-          <h5 class="nav"><a class="nav" href="https://www.google.com/maps/place/Colorado/@38.9807165,-107.7944592,7z/data=!3m1!4b1!4m5!3m4!1s0x874014749b1856b7:0xc75483314990a7ff!8m2!3d39.5500507!4d-105.7820674/" target="blank">Google Maps</a></h5>
+          <h5 class="nav"><a class="social" href="https://github.com/fromunda6/" target="blank"><img src="images/social-1_logo-github.svg" alt="GitHub Icon"></a></h5>
         </div>
       </nav>
 
@@ -118,6 +129,12 @@
       <footer class="row footer">
         <col class="col-xs-12">
           <p class="footer">Images Edited with <a class="nav" href="https://pixlr.com/" target="blank">Pixlr</a></p>
+        </col>
+      </footer>
+
+      <footer class="row footer">
+        <col class="col-xs-12">
+          <p class="footer">Icons made by <a href="http://www.flaticon.com/authors/simpleicon" title="SimpleIcon">SimpleIcon</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></p>
         </col>
       </footer>
 

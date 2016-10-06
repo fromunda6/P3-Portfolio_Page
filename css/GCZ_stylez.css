@@ -4,20 +4,17 @@ body {
 	font-weight: 300;
 }
 
-
-img, 
-embed, 
-object, 
+img,
+embed,
+object,
 video {
 	max-width: 100%;
 }
 
-
-div, 
+div,
 span {
 	max-width: 100%;
 }
-
 
 button,
 link {
@@ -25,11 +22,10 @@ link {
 	min-height: 48px;
 }
 
-
 .container {
 	background-color: rgb(100,100,100);
+	width: 100%
 }
-
 
 .row {
 	padding-left: 10px;
@@ -38,13 +34,18 @@ link {
 	margin-right: 10px;
 }
 
-
 .nav {
 	text-align: center;
 	color: rgb(0,0,255);
 	font-weight: bold;
 }
 
+.social:hover {
+	color: red;
+	opacity: 0.2;
+}
+
+.social {transition-property: opacity; transition-duration: 500ms;}
 
 .col-centered {
 	display: inline-block;
@@ -66,7 +67,7 @@ link {
 
 .title-super {
 	font-size: 2.0em;
-} 
+}
 
 
 .title-logo {
@@ -93,14 +94,14 @@ footer {
 /*
 style rules brief:
 o. remembering the specificity cascade, it is best to style elements
-from the "widest" (<body>) to the narrowest (<p>); this adheres to the 
+from the "widest" (<body>) to the narrowest (<p>); this adheres to the
 logic of selecting page-wide styles before the div-wide styles, as you
-would select the type of frosting on a cake before the sprinkles (?).  
-Additionally, code further down the page takes precedence over code near 
+would select the type of frosting on a cake before the sprinkles (?).
+Additionally, code further down the page takes precedence over code near
 the top, assuming equal specificity (tag<class<id)
 
-a. avoid use of element selectors (usually unnecessary) as well as ID 
-selectors (con-straining W.R.T. styling options), and avoid qualifying class 
+a. avoid use of element selectors (usually unnecessary) as well as ID
+selectors (con-straining W.R.T. styling options), and avoid qualifying class
 names with type (<p>)selectors.
 
 b. use descriptive rather than semantically
@@ -108,7 +109,7 @@ opaque or confusing class names, and avoid
 overlap/confusion with HTML element names
 c. use short-hand...font-family, font-size
 and line-height, specificied 1 row at a time,
-can be condensed into:; {font: value, value, 
+can be condensed into:; {font: value, value,
 value;}. Note that EVERY value must be specified
 or entire FONT statement will be ignored
 d. use hyphen rather than underscore to separate
