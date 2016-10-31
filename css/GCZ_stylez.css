@@ -1,6 +1,6 @@
 body {
 	font-family: 'Quicksand', sans-serif;
-	color: rgb(75,200,75);
+	color: rgb(0,0,0);
 	font-weight: 300;
 }
 
@@ -54,9 +54,14 @@ link {
 	margin-right: -4px;
 }
 
+.project {
+  border: 6px solid #3469af;
+  border-radius: 4px;
+}
+
 
 .text-muted {
-	color: rgb(50,150,50);
+	color: rgb(100,0,100);
 }
 
 
@@ -82,7 +87,7 @@ link {
 
 
 footer {
-	color: rgb(255,30,80);
+	color: black;
 	text-align: left;
 	font-weight: bold;
 }
